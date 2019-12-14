@@ -8,6 +8,20 @@
 
 import UIKit
 
+enum MiError: Error {
+    case Malo
+    case Peor
+    case MuchoPeor
+}
+
+func falible(flag:Bool) throws -> String {
+    if flag{
+        throw MiError.Peor
+    }
+    return "Casi perfecto"
+}
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +29,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        for i in 1...100 {
+            let dato = 9
+            print("Swift es increible \(i) \(dato)")
+        }
+        
+        // try! falible(flag: true)
         return true
     }
 
