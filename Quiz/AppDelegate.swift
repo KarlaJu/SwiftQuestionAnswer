@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         for i in 1...100 {
             let dato = 9
-            print("Swift es increible \(i) \(dato)")
+            //print("Swift es increible \(i) \(dato)")
         }
         
         // try! falible(flag: true)
