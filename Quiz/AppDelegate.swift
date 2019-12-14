@@ -15,7 +15,7 @@ enum MiError: Error {
 }
 
 func falible(flag:Bool) throws -> String {
-    if flag{
+    if flag {
         throw MiError.Peor
     }
     return "Casi perfecto"
@@ -32,10 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         for i in 1...100 {
             let dato = 9
-            //print("Swift es increible \(i) \(dato)")
+            print("Swift es increible \(i) \(dato)")
         }
         
-        // try! falible(flag: true)
+        try! falible(flag: true) //Ejecuta la funcion, no importa que truene
         return true
     }
 
